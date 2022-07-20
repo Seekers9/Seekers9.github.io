@@ -16,21 +16,34 @@
   <meta name="author" content="Seeker">
   <meta name="keywords" content="">
   
-    <meta name="description" content="卸载nodejs 通过控制面板卸载node.js 删除安装所在文件夹下的nodejs文件夹 查看以下路径文件夹是否存在，有则删除c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;node_modelsc:&#x2F;&#x2F;Program Fiels&#x2F;nodejsc:&#x2F;&#x2F;user&#x2F;xxx&#x2F;AppData&#x2F;Roaming">
+    <meta name="description" content="平台：win10 专业版 19044.1826  版本：  nodejs ：16.16.0 LTS  hexo ：6.2.0  hexo-cli ：4.3.0  Fluid ：1.9.2      友情链接页的增加 打开主题文件夹下的_config.yml文件      找到导航栏相关配置navbar下的导航栏菜单menu，将最下面行的#号删除，保存   刷新博客页面可见导航菜单中出现友链">
 <meta property="og:type" content="article">
-<meta property="og:title" content="个人博客搭建">
-<meta property="og:url" content="https://seekers9.github.io/2022/07/17/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:title" content="hexo博客fluid主题关于导航链接的修改">
+<meta property="og:url" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/index.html">
 <meta property="og:site_name" content="Seekers">
-<meta property="og:description" content="卸载nodejs 通过控制面板卸载node.js 删除安装所在文件夹下的nodejs文件夹 查看以下路径文件夹是否存在，有则删除c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;node_modelsc:&#x2F;&#x2F;Program Fiels&#x2F;nodejsc:&#x2F;&#x2F;user&#x2F;xxx&#x2F;AppData&#x2F;Roaming">
+<meta property="og:description" content="平台：win10 专业版 19044.1826  版本：  nodejs ：16.16.0 LTS  hexo ：6.2.0  hexo-cli ：4.3.0  Fluid ：1.9.2      友情链接页的增加 打开主题文件夹下的_config.yml文件      找到导航栏相关配置navbar下的导航栏菜单menu，将最下面行的#号删除，保存   刷新博客页面可见导航菜单中出现友链">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-17T07:44:03.000Z">
-<meta property="article:modified_time" content="2022-07-17T08:45:31.846Z">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/8.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/9.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/1.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/2.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/9-16583301796668.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/3.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/4.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/6.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/7.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/10.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/11.png">
+<meta property="og:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/5.png">
+<meta property="article:published_time" content="2022-07-20T15:04:31.000Z">
+<meta property="article:modified_time" content="2022-07-20T15:44:29.814Z">
 <meta property="article:author" content="Seeker">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://seekers9.github.io/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/8.png">
   
   
   
-  <title>个人博客搭建 - Seekers</title>
+  <title>hexo博客fluid主题关于导航链接的修改 - Seekers</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -207,7 +220,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="个人博客搭建"></span>
+            <span id="subtitle" data-typed-text="hexo博客fluid主题关于导航链接的修改"></span>
           
         </div>
 
@@ -218,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-07-17 15:44" pubdate>
-          2022年7月17日 下午
+        <time datetime="2022-07-20 23:04" pubdate>
+          2022年7月20日 晚上
         </time>
       </span>
     
@@ -230,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.3k 字
+          361 字
         
       </span>
     
@@ -241,7 +254,7 @@
         
         
         
-          19 分钟
+          4 分钟
         
       </span>
     
@@ -279,106 +292,79 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">个人博客搭建</h1>
+            <h1 style="display: none">hexo博客fluid主题关于导航链接的修改</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="卸载nodejs"><a href="#卸载nodejs" class="headerlink" title="卸载nodejs"></a>卸载nodejs</h2><ol>
-<li>通过控制面板卸载node.js</li>
-<li>删除安装所在文件夹下的nodejs文件夹</li>
-<li>查看以下路径文件夹是否存在，有则删除<br>c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;node_models<br>c:&#x2F;&#x2F;Program Fiels&#x2F;nodejs<br>c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;AppData&#x2F;Roaming&#x2F;npm<br>c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;AppData&#x2F;Roaming&#x2F;npm-cache</li>
-<li>删除npm和node相关的所有环境变量</li>
-<li><hr>
+                <ul>
+<li><p>平台：win10 专业版 19044.1826</p>
 </li>
-<li>查看AppData文件夹。打开电脑文件，点击查看，把隐藏的项目选上即可看到</li>
-<li><hr>
+<li><p>版本：</p>
+<ul>
+<li><p>nodejs ：16.16.0 LTS</p>
+</li>
+<li><p>hexo ：6.2.0</p>
+</li>
+<li><p>hexo-cli ：4.3.0</p>
+</li>
+<li><p>Fluid ：1.9.2</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="友情链接页的增加"><a href="#友情链接页的增加" class="headerlink" title="友情链接页的增加"></a>友情链接页的增加</h2><ol>
+<li><p>打开主题文件夹下的_config.yml文件</p>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/8.png" srcset="/img/loading.gif" lazyload alt="8"></p>
 </li>
 </ol>
-<h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ul>
-<li>下载网址：<a target="_blank" rel="noopener" href="https://www.nodejs.org/">https://www.nodejs.org</a></li>
-<li>下载LTS即可，意为长期支持版</li>
-<li>安装时自定义安装路径选除C盘以外的盘即可，其余点击next即可</li>
-<li>安装完成，以管理员权限打开cmd或powershell，输出指令：node -v 和 npm -v 校验是否安装成功</li>
-</ul>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/9.png" srcset="/img/loading.gif" lazyload alt="9"></p>
+<ol start="2">
+<li><p>找到导航栏相关配置navbar下的导航栏菜单menu，将最下面行的#号删除，保存</p>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/1.png" srcset="/img/loading.gif" lazyload alt="1"></p>
+</li>
+<li><p>刷新博客页面可见导航菜单中出现友链</p>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/2.png" srcset="/img/loading.gif" lazyload alt="2"></p>
+</li>
+</ol>
+<hr>
+<h2 id="友情链接页的页面内容修改"><a href="#友情链接页的页面内容修改" class="headerlink" title="友情链接页的页面内容修改"></a>友情链接页的页面内容修改</h2><ol>
+<li><p>在主题文件夹的_config.yml文件修改</p>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/9-16583301796668.png" srcset="/img/loading.gif" lazyload alt="9"></p>
+</li>
+<li><p>在_config.yml文件中找到友链页的相关配置</p>
+</li>
+</ol>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/3.png" srcset="/img/loading.gif" lazyload alt="3"></p>
+<ol start="3">
+<li><p>对括号里的内容复制增加或修改</p>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/4.png" srcset="/img/loading.gif" lazyload alt="4"></p>
+</li>
+<li><p>即可在页面看到你的相关增删</p>
+<hr>
+<h2 id="修改导航菜单的名字"><a href="#修改导航菜单的名字" class="headerlink" title="修改导航菜单的名字"></a>修改导航菜单的名字</h2><ol>
+<li><p>打开博客文件夹的_config.yml文件找到你设置的博客语言</p>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/6.png" srcset="/img/loading.gif" lazyload alt="6"></p>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/7.png" srcset="/img/loading.gif" lazyload alt="7"></p>
+<ol start="2">
+<li><p>找到位于主题文件夹下的languages文件夹，选择打开你刚刚看的语言的相关文件</p>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/10.png" srcset="/img/loading.gif" lazyload alt="10"></p>
+</li>
+</ol>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/11.png" srcset="/img/loading.gif" lazyload alt="11"></p>
+<ol start="3">
+<li><p>找到链接的配置修改即可</p>
+<p><img src="/2022/07/20/hexo%E5%8D%9A%E5%AE%A2fluid%E4%B8%BB%E9%A2%98%E5%85%B3%E4%BA%8E%E5%AF%BC%E8%88%AA%E9%93%BE%E6%8E%A5%E7%9A%84%E4%BF%AE%E6%94%B9/5.png" srcset="/img/loading.gif" lazyload alt="5"></p>
+</li>
+</ol>
 <hr>
 <ul>
-<li>如果npm下载太慢，可将下载源换成淘宝源</li>
-</ul>
-<hr>
-<h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><hr>
-<h2 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装"></a>hexo的安装</h2><ul>
-<li>以管理员权限打开cmd或powershell，输出指令：npm install -g hexo-cli</li>
-<li>-g : 意为全局安装</li>
-<li>校验是否安装成功：hexo -v</li>
-</ul>
-<hr>
-<h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><ul>
-<li>创建名称为：xxx.github.io</li>
-<li>xxx为你的GitHub用户名</li>
-</ul>
-<hr>
-<h2 id="创建ssh密匙"><a href="#创建ssh密匙" class="headerlink" title="创建ssh密匙"></a>创建ssh密匙</h2><ul>
-<li>打开git bash</li>
-<li>输入指令：ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#x78;&#64;&#x65;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#109;">&#x78;&#120;&#x78;&#64;&#x65;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#109;</a>“</li>
-<li>xxx ：你的邮箱名字</li>
-<li>Email ：所用邮箱</li>
-<li>例 ：<a href="mailto:&#x78;&#x78;&#x78;&#64;&#49;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;">&#x78;&#x78;&#x78;&#64;&#49;&#x36;&#51;&#x2e;&#99;&#x6f;&#109;</a></li>
-<li>查看sshkey</li>
-<li>指令：cat ~&#x2F;.ssh&#x2F;id_rsa.pub</li>
-<li>复制sshkey</li>
-<li>添加到github</li>
-<li>点击头像，选择 Settings<br>选择 SHH and GPG keys<br>点击 New SSH key<br>填入 SSH KEY<br>点击 Add SSH key</li>
-<li>输入以下指令测试：ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#x74;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a></li>
-<li>sshkey本地存放路径：C:\Users\xxx\ .ssh</li>
-<li>为什么要配置这个?因为提交代码要拥有你的github权限，但是直接使用用户名和密码不安全，所以我们使用ssh key来解决本地和服务器的连接问题。<br>简单的来说就是给予你当前电脑访问你GitHub 仓库的权限</li>
-</ul>
-<hr>
-<h2 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h2><ul>
-<li>新建文件夹，在git bash 中进入你新建文件夹的路径</li>
-<li>初始化指令：hexo init</li>
-</ul>
-<hr>
-<ul>
-<li>出现错误<br>INFO  Cloning hexo-starter <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-starter.git">https://github.com/hexojs/hexo-starter.git</a><br>fatal: unable to access ‘<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-starter.git/&#39;">https://github.com/hexojs/hexo-starter.git/&#39;</a>: SSL certificate problem: unable to get local issuer certificate<br>WARN  git clone failed. Copying data instead<br>FATAL {<br>err: [Error: EPERM: operation not permitted, mkdir ‘D:&#39;] {<br>  errno: -4048,<br>  code: ‘EPERM’,<br>  syscall: ‘mkdir’,<br>  path: ‘D:\‘<br>}<br>} Something’s wrong. Maybe you can find the solution here: %s <a target="_blank" rel="noopener" href="http://hexo.io/docs/troubleshooting.html">http://hexo.io/docs/troubleshooting.html</a></li>
-</ul>
-<hr>
-<ul>
-<li>以上错误解决办法</li>
-<li>选择nodejs安装文件夹，打开属性，点击安全，点击编辑，选择users，点击允许完全控制，确定</li>
-<li>重启电脑使配置生效</li>
-<li>再次输入指令即可成功</li>
-<li>如果还是出现以上错误可输入指令：hexo init blog</li>
-<li>blog : 为文件夹名字</li>
-</ul>
-<hr>
-<ul>
-<li>在你建立的博客文件夹下打开git bash</li>
-<li>生成静态文件，指令：hexo g</li>
-<li>启动博客，指令：hexo s</li>
-<li>出现 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></li>
-<li>将链接用浏览器打开，即可看到你的博客</li>
-</ul>
-<hr>
-<h2 id="将博客部署到github"><a href="#将博客部署到github" class="headerlink" title="将博客部署到github"></a>将博客部署到github</h2><ul>
-<li>下载插件hexo-deployer-git</li>
-<li>指令：npm install hexo-deployer-git –save</li>
-<li>在你博客文件夹中找到_config.yml文件打开</li>
-<li>拉到最下面，修改为</li>
-<li>deploy:<br>type: git<br>repo: <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#103;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:xxx&#x2F;xxx.github.io.git<br>branch: main</li>
-<li>repo即刚刚建立的仓库的SSH链接</li>
-<li>注：记得在冒号后空一格</li>
-</ul>
-<hr>
-<ul>
-<li>在推送前输入邮箱和名字</li>
-<li>指令：git config –global user.email “xxx”</li>
-<li>xxx为你的GitHub邮箱</li>
-<li>git config –global user.name “xxx”</li>
-<li>xxx为你的GitHub名字</li>
-<li>注：如果有打开加速节点的请先关闭</li>
-<li>输入命令：hexo d</li>
-<li>在仓库可见已成功推送，部署成功</li>
+<li>更多详细说明请参考主题官方文档：<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%A1%B5">友情链接页</a></li>
 </ul>
 
                 
@@ -397,8 +383,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>个人博客搭建</div>
-      <div>https://seekers9.github.io/2022/07/17/个人博客搭建/</div>
+      <div>hexo博客fluid主题关于导航链接的修改</div>
+      <div>https://seekers9.github.io/2022/07/20/hexo博客fluid主题关于导航链接的修改/</div>
     </div>
     <div class="license-meta">
       
@@ -410,7 +396,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年7月17日</div>
+          <div>2022年7月20日</div>
         </div>
       
       
@@ -440,18 +426,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/07/17/demo/" title="demo">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">demo</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/07/17/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2022/07/18/%E8%A7%A3%E5%86%B3hexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/" title="解决hexo博客图片无法加载问题">
+                        <span class="hidden-mobile">解决hexo博客图片无法加载问题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
