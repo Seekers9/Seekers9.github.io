@@ -4,6 +4,89 @@
   
   
   <entry>
+    <title>Python | 常用转义字符</title>
+    <link href="/2022/07/29/Python-%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/"/>
+    <url>/2022/07/29/Python-%E5%B8%B8%E7%94%A8%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/</url>
+    
+    <content type="html"><![CDATA[<h2 id="python笔记（3）"><a href="#python笔记（3）" class="headerlink" title="python笔记（3）"></a>python笔记（3）</h2><h3 id="常用转义字符"><a href="#常用转义字符" class="headerlink" title="常用转义字符"></a>常用转义字符</h3><hr><h5 id="无法直接表示的字符"><a href="#无法直接表示的字符" class="headerlink" title="无法直接表示的字符"></a>无法直接表示的字符</h5><ul><li>\n ：newline</li><li>作用 ：换行</li><li>\r ：return</li><li>作用 ：回车</li><li>\t ：Tab</li><li>作用 ：水平制表符，即占四个字符位</li><li>\b ：backspace</li><li>作用 ：退格，即将前一个字符覆盖掉</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># \n</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hello \n world&#x27;</span>)<br><span class="hljs-comment"># \r</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hello \r world&#x27;</span>)<br><span class="hljs-comment"># \t</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hello \t world&#x27;</span>) <span class="hljs-comment">#注意看 o 和 w 之间的空格，一共是三个</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hell \t world&#x27;</span>) <span class="hljs-comment">#注意看 l 和 w 之间的空格，一共是四个</span><br><span class="hljs-comment"># \t就是占四个字符位的，每隔四个字符算一次。有字母占位，则余下的字符位向后空格，若字母占满四个，重新算一次</span><br><span class="hljs-comment"># \b</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hello \b world&#x27;</span>)<br><span class="hljs-comment"># 将前一个字符覆盖掉，输出hellworld</span><br></code></pre></td></tr></table></figure><hr><h5 id="特殊用途的字符"><a href="#特殊用途的字符" class="headerlink" title="特殊用途的字符"></a>特殊用途的字符</h5><ul><li>反斜杠 ：’&#39;</li><li>作用 ：使特殊字符失去其作用功能</li><li>一些难以表达的特殊字符需要加上反斜杠才能输出显示</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;你向邻居问好，&#x27;</span>早<span class="hljs-string">&#x27;&#x27;</span>)<br><span class="hljs-comment"># 当输出字符串输出包含引号，电脑就会报错，因为它无法识别</span><br><span class="hljs-comment"># 多个相同引号在一起的情况，属于语法错误，但你非要输出中有引号该怎么办</span><br><span class="hljs-comment"># 加上反斜杠即可，即</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;你向邻居问好，\&#x27;早\&#x27; &#x27;</span>)<br><span class="hljs-comment"># 如果你想显示斜杠，直接输出是显示不出来的</span><br>pritn(<span class="hljs-string">&#x27;\&#x27;)</span><br><span class="hljs-string"># 在斜杠前面再加斜杠即可</span><br><span class="hljs-string">print(&#x27;</span>\\<span class="hljs-string">&#x27;)</span><br></code></pre></td></tr></table></figure><hr><h5 id="原字符"><a href="#原字符" class="headerlink" title="原字符"></a>原字符</h5><ul><li>在引号前加  ‘r’</li><li>作用 ：使其在引号内的字符串中包含的特殊字符失去效用，在输出中显示出来</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">r&#x27;hello \n world&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">r&#x27;hello \r world&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">r&#x27;hello \t world&#x27;</span>) <br><span class="hljs-built_in">print</span>(<span class="hljs-string">r&#x27;hello \b world&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">r&#x27;你向邻居问好，\&#x27;早\&#x27; &#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">r&#x27;\\&#x27;</span>)<br><span class="hljs-comment"># 注意，必须是在完整的引号的情况下，&#x27;&#x27;,&quot;&quot;,下列情况属于错误</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">r&#x27;hello \&#x27;)</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Python | 注释</title>
+    <link href="/2022/07/29/Python-%E6%B3%A8%E9%87%8A/"/>
+    <url>/2022/07/29/Python-%E6%B3%A8%E9%87%8A/</url>
+    
+    <content type="html"><![CDATA[<h2 id="python笔记（2）"><a href="#python笔记（2）" class="headerlink" title="python笔记（2）"></a>python笔记（2）</h2><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><ul><li>“<strong>#</strong>“：单个井号就是注释，且在该井号后单行有效</li></ul><hr><ul><li>多行注释：没有单独的多行注释标记，将一对三引号之间的文字称为注释</li></ul><hr><ul><li>编码声明注释：在文件开头加上声明注释，用以指定源码文件的编码格式。python3不需要再如此操作。一般会加上声明，因为程序可能会在python2上运行</li></ul><hr><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 单行注释</span><br><span class="hljs-comment"># 单行有效</span><br><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">多行注释</span><br><span class="hljs-string">hello</span><br><span class="hljs-string">world</span><br><span class="hljs-string">注释</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><br><span class="hljs-comment"># 编码声明注释,要写在文件的最开头</span><br><span class="hljs-comment"># coding:编码  gbk：中文编码格式</span><br><span class="hljs-comment"># 例：</span><br><span class="hljs-string">&quot;   #coding:gbk    &quot;</span> <br><span class="hljs-comment"># 或</span><br><span class="hljs-string">&quot;   #coding:utf-8    &quot;</span> <br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>LaTeX使用</title>
+    <link href="/2022/07/26/LaTeX%E4%BD%BF%E7%94%A8/"/>
+    <url>/2022/07/26/LaTeX%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="LaTeX使用"><a href="#LaTeX使用" class="headerlink" title="LaTeX使用"></a>LaTeX使用</h2><hr><p>平台：</p><ul><li>Typora</li><li>hexo</li><li>markdown</li></ul><hr><h5 id="1-使用"><a href="#1-使用" class="headerlink" title="1 .使用"></a>1 .使用</h5><ul><li>在文章中输出&#x3D;&#x3D;$$&#x3D;&#x3D; 即会出现LaTeX公式块</li></ul><h5 id="2-显示分数"><a href="#2-显示分数" class="headerlink" title="2. 显示分数"></a>2. 显示分数</h5><ul><li><p>在块中输入&#x3D;&#x3D;\frac {} {}&#x3D;&#x3D; 即可</p></li><li><p>第一括号为分子，第二括号为分母</p></li></ul><h5 id="3-显示不等号"><a href="#3-显示不等号" class="headerlink" title="3.  显示不等号"></a>3.  显示不等号</h5><p>- </p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>hexo创建草稿文件</title>
+    <link href="/2022/07/24/hexo%E6%96%B0%E5%BB%BA%E8%8D%89%E7%A8%BF%E6%96%87%E4%BB%B6/"/>
+    <url>/2022/07/24/hexo%E6%96%B0%E5%BB%BA%E8%8D%89%E7%A8%BF%E6%96%87%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<h2 id="创建草稿文件"><a href="#创建草稿文件" class="headerlink" title="创建草稿文件"></a>创建草稿文件</h2><h4 id="1-hexo博客创建草稿文件"><a href="#1-hexo博客创建草稿文件" class="headerlink" title="1. hexo博客创建草稿文件"></a>1. hexo博客创建草稿文件</h4><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs haxe"><span class="hljs-comment">//代码</span><br>$ hexo <span class="hljs-keyword">new</span> <span class="hljs-type">draft</span> <span class="hljs-string">&quot;new draft&quot;</span><br><span class="hljs-comment">//例：创建一个demo草稿</span><br>$ hexo <span class="hljs-keyword">new</span> <span class="hljs-type">draft</span> <span class="hljs-string">&quot;demo&quot;</span><br></code></pre></td></tr></table></figure><ul><li>在建立时会被保存到 <code>source/_drafts</code> 文件夹,但是这个文件不被显示在页面上，链接也是访问不到的。</li></ul><hr><h4 id="2-将草稿变成文章或者页面"><a href="#2-将草稿变成文章或者页面" class="headerlink" title="2. 将草稿变成文章或者页面"></a>2. 将草稿变成文章或者页面</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-variable">$ </span>hexo publish [layout] &lt;title&gt;<br><span class="hljs-regexp">//</span>例：将草稿里的demo移到_post文件夹<br><span class="hljs-variable">$ </span>hexo publish <span class="hljs-string">&quot;demo&quot;</span><br></code></pre></td></tr></table></figure><ul><li>可以通过 <strong>publish</strong>命令将草稿移动到 <strong>source&#x2F;_posts</strong>文件夹。</li><li>可在命令中指定<strong>layout</strong>来指定布局。</li><li>三种布局：<strong>post</strong> , <strong>page</strong> , <strong>draft</strong></li></ul><hr><h4 id="3-直接强行预览草稿"><a href="#3-直接强行预览草稿" class="headerlink" title="3. 直接强行预览草稿"></a>3. 直接强行预览草稿</h4><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-string">//</span>直接代码<br>$ hexo server <span class="hljs-params">--draft</span><br>或<br>$ hexo s <span class="hljs-params">--draft</span><br><span class="hljs-string">//</span>或者将博客_config.yml配置文件修改为如下：<br>render_drafts: <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure><ul><li>草稿默认不会显示在页面中，您可在执行时加上 <code>--draft</code> 参数，或是把 <code>render_drafts</code> 参数设为 <code>true</code> 来预览草稿</li></ul><hr><p>更详细描述请参考官方文档：<a href="https://hexo.io/zh-cn/docs/writing">写作</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>函数与极限</title>
+    <link href="/2022/07/24/%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/"/>
+    <url>/2022/07/24/%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%81%E9%99%90/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1-函数"><a href="#1-函数" class="headerlink" title="1. 函数"></a>1. 函数</h2><h4 id="1-求定义域"><a href="#1-求定义域" class="headerlink" title="1.求定义域"></a>1.求定义域</h4><ul><li><p>有以下四种情况：</p><ul><li><p>分母不为零<br>$$<br>\frac {1}{f(x)}    且f(x)\neq 0<br>$$</p></li><li><p>偶次根式</p></li><li><p>对数函数</p><ul><li>反三角函数</li></ul></li></ul></li></ul>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>设置显示文章更新时间</title>
     <link href="/2022/07/23/%E8%AE%BE%E7%BD%AE%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4/"/>
     <url>/2022/07/23/%E8%AE%BE%E7%BD%AE%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4/</url>
@@ -64,18 +147,11 @@
     
     
     
-  </entry>
-  
-  
-  
-  <entry>
-    <title>demo</title>
-    <link href="/2022/07/17/demo/"/>
-    <url>/2022/07/17/demo/</url>
-    
-    <content type="html"><![CDATA[<p><img src="/2022/07/17/demo/python_%E5%90%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E5%A4%9A%E4%BB%BB%E5%8A%A1%E4%B8%8D%E5%90%8C%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E5%88%9B%E5%BB%BA.png" alt="python_同文件夹多任务不同虚拟环境创建"></p>]]></content>
-    
-    
+    <tags>
+      
+      <tag>python</tag>
+      
+    </tags>
     
   </entry>
   
@@ -86,7 +162,7 @@
     <link href="/2022/07/17/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     <url>/2022/07/17/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
     
-    <content type="html"><![CDATA[<h2 id="卸载nodejs"><a href="#卸载nodejs" class="headerlink" title="卸载nodejs"></a>卸载nodejs</h2><ol><li>通过控制面板卸载node.js</li><li>删除安装所在文件夹下的nodejs文件夹</li><li>查看以下路径文件夹是否存在，有则删除<br>c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;node_models<br>c:&#x2F;&#x2F;Program Fiels&#x2F;nodejs<br>c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;AppData&#x2F;Roaming&#x2F;npm<br>c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;AppData&#x2F;Roaming&#x2F;npm-cache</li><li>删除npm和node相关的所有环境变量</li><li><hr></li><li>查看AppData文件夹。打开电脑文件，点击查看，把隐藏的项目选上即可看到</li><li><hr></li></ol><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ul><li>下载网址：<a href="https://www.nodejs.org/">https://www.nodejs.org</a></li><li>下载LTS即可，意为长期支持版</li><li>安装时自定义安装路径选除C盘以外的盘即可，其余点击next即可</li><li>安装完成，以管理员权限打开cmd或powershell，输出指令：node -v 和 npm -v 校验是否安装成功</li></ul><hr><ul><li>如果npm下载太慢，可将下载源换成淘宝源</li></ul><hr><h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><hr><h2 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装"></a>hexo的安装</h2><ul><li>以管理员权限打开cmd或powershell，输出指令：npm install -g hexo-cli</li><li>-g : 意为全局安装</li><li>校验是否安装成功：hexo -v</li></ul><hr><h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><ul><li>创建名称为：xxx.github.io</li><li>xxx为你的GitHub用户名</li></ul><hr><h2 id="创建ssh密匙"><a href="#创建ssh密匙" class="headerlink" title="创建ssh密匙"></a>创建ssh密匙</h2><ul><li>打开git bash</li><li>输入指令：ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#120;&#64;&#x65;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;">&#x78;&#120;&#120;&#64;&#x65;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#109;</a>“</li><li>xxx ：你的邮箱名字</li><li>Email ：所用邮箱</li><li>例 ：<a href="mailto:&#x78;&#120;&#x78;&#x40;&#49;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;">&#x78;&#120;&#x78;&#x40;&#49;&#54;&#51;&#46;&#x63;&#x6f;&#x6d;</a></li><li>查看sshkey</li><li>指令：cat ~&#x2F;.ssh&#x2F;id_rsa.pub</li><li>复制sshkey</li><li>添加到github</li><li>点击头像，选择 Settings<br>选择 SHH and GPG keys<br>点击 New SSH key<br>填入 SSH KEY<br>点击 Add SSH key</li><li>输入以下指令测试：ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;</a></li><li>sshkey本地存放路径：C:\Users\xxx\ .ssh</li><li>为什么要配置这个?因为提交代码要拥有你的github权限，但是直接使用用户名和密码不安全，所以我们使用ssh key来解决本地和服务器的连接问题。<br>简单的来说就是给予你当前电脑访问你GitHub 仓库的权限</li></ul><hr><h2 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h2><ul><li>新建文件夹，在git bash 中进入你新建文件夹的路径</li><li>初始化指令：hexo init</li></ul><hr><ul><li>出现错误<br>INFO  Cloning hexo-starter <a href="https://github.com/hexojs/hexo-starter.git">https://github.com/hexojs/hexo-starter.git</a><br>fatal: unable to access ‘<a href="https://github.com/hexojs/hexo-starter.git/&#39;">https://github.com/hexojs/hexo-starter.git/&#39;</a>: SSL certificate problem: unable to get local issuer certificate<br>WARN  git clone failed. Copying data instead<br>FATAL {<br>err: [Error: EPERM: operation not permitted, mkdir ‘D:&#39;] {<br>  errno: -4048,<br>  code: ‘EPERM’,<br>  syscall: ‘mkdir’,<br>  path: ‘D:\‘<br>}<br>} Something’s wrong. Maybe you can find the solution here: %s <a href="http://hexo.io/docs/troubleshooting.html">http://hexo.io/docs/troubleshooting.html</a></li></ul><hr><ul><li>以上错误解决办法</li><li>选择nodejs安装文件夹，打开属性，点击安全，点击编辑，选择users，点击允许完全控制，确定</li><li>重启电脑使配置生效</li><li>再次输入指令即可成功</li><li>如果还是出现以上错误可输入指令：hexo init blog</li><li>blog : 为文件夹名字</li></ul><hr><ul><li>在你建立的博客文件夹下打开git bash</li><li>生成静态文件，指令：hexo g</li><li>启动博客，指令：hexo s</li><li>出现 <a href="http://localhost:4000/">http://localhost:4000/</a></li><li>将链接用浏览器打开，即可看到你的博客</li></ul><hr><h2 id="将博客部署到github"><a href="#将博客部署到github" class="headerlink" title="将博客部署到github"></a>将博客部署到github</h2><ul><li>下载插件hexo-deployer-git</li><li>指令：npm install hexo-deployer-git –save</li><li>在你博客文件夹中找到_config.yml文件打开</li><li>拉到最下面，修改为</li><li>deploy:<br>type: git<br>repo: <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;</a>:xxx&#x2F;xxx.github.io.git<br>branch: main</li><li>repo即刚刚建立的仓库的SSH链接</li><li>注：记得在冒号后空一格</li></ul><hr><ul><li>在推送前输入邮箱和名字</li><li>指令：git config –global user.email “xxx”</li><li>xxx为你的GitHub邮箱</li><li>git config –global user.name “xxx”</li><li>xxx为你的GitHub名字</li><li>注：如果有打开加速节点的请先关闭</li><li>输入命令：hexo d</li><li>在仓库可见已成功推送，部署成功</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="卸载nodejs"><a href="#卸载nodejs" class="headerlink" title="卸载nodejs"></a>卸载nodejs</h2><ol><li>通过控制面板卸载node.js</li><li>删除安装所在文件夹下的nodejs文件夹</li><li>查看以下路径文件夹是否存在，有则删除<br>c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;node_models<br>c:&#x2F;&#x2F;Program Fiels&#x2F;nodejs<br>c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;AppData&#x2F;Roaming&#x2F;npm<br>c:&#x2F;&#x2F;user&#x2F;xxx&#x2F;AppData&#x2F;Roaming&#x2F;npm-cache</li><li>删除npm和node相关的所有环境变量</li><li><hr></li><li>查看AppData文件夹。打开电脑文件，点击查看，把隐藏的项目选上即可看到</li><li><hr></li></ol><h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ul><li>下载网址：<a href="https://www.nodejs.org/">https://www.nodejs.org</a></li><li>下载LTS即可，意为长期支持版</li><li>安装时自定义安装路径选除C盘以外的盘即可，其余点击next即可</li><li>安装完成，以管理员权限打开cmd或powershell，输出指令：node -v 和 npm -v 校验是否安装成功</li></ul><hr><ul><li>如果npm下载太慢，可将下载源换成淘宝源</li></ul><hr><h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><hr><h2 id="hexo的安装"><a href="#hexo的安装" class="headerlink" title="hexo的安装"></a>hexo的安装</h2><ul><li>以管理员权限打开cmd或powershell，输出指令：npm install -g hexo-cli</li><li>-g : 意为全局安装</li><li>校验是否安装成功：hexo -v</li></ul><hr><h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><ul><li>创建名称为：xxx.github.io</li><li>xxx为你的GitHub用户名</li></ul><hr><h2 id="创建ssh密匙"><a href="#创建ssh密匙" class="headerlink" title="创建ssh密匙"></a>创建ssh密匙</h2><ul><li>打开git bash</li><li>输入指令：ssh-keygen -t rsa -C “<a href="mailto:&#120;&#x78;&#120;&#64;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#120;&#x78;&#120;&#64;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a>“</li><li>xxx ：你的邮箱名字</li><li>Email ：所用邮箱</li><li>例 ：<a href="mailto:&#x78;&#120;&#x78;&#64;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#x6d;">&#x78;&#120;&#x78;&#64;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#x6d;</a></li><li>查看sshkey</li><li>指令：cat ~&#x2F;.ssh&#x2F;id_rsa.pub</li><li>复制sshkey</li><li>添加到github</li><li>点击头像，选择 Settings<br>选择 SHH and GPG keys<br>点击 New SSH key<br>填入 SSH KEY<br>点击 Add SSH key</li><li>输入以下指令测试：ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a></li><li>sshkey本地存放路径：C:\Users\xxx\ .ssh</li><li>为什么要配置这个?因为提交代码要拥有你的github权限，但是直接使用用户名和密码不安全，所以我们使用ssh key来解决本地和服务器的连接问题。<br>简单的来说就是给予你当前电脑访问你GitHub 仓库的权限</li></ul><hr><h2 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h2><ul><li>新建文件夹，在git bash 中进入你新建文件夹的路径</li><li>初始化指令：hexo init</li></ul><hr><ul><li>出现错误<br>INFO  Cloning hexo-starter <a href="https://github.com/hexojs/hexo-starter.git">https://github.com/hexojs/hexo-starter.git</a><br>fatal: unable to access ‘<a href="https://github.com/hexojs/hexo-starter.git/&#39;">https://github.com/hexojs/hexo-starter.git/&#39;</a>: SSL certificate problem: unable to get local issuer certificate<br>WARN  git clone failed. Copying data instead<br>FATAL {<br>err: [Error: EPERM: operation not permitted, mkdir ‘D:&#39;] {<br>  errno: -4048,<br>  code: ‘EPERM’,<br>  syscall: ‘mkdir’,<br>  path: ‘D:\‘<br>}<br>} Something’s wrong. Maybe you can find the solution here: %s <a href="http://hexo.io/docs/troubleshooting.html">http://hexo.io/docs/troubleshooting.html</a></li></ul><hr><ul><li>以上错误解决办法</li><li>选择nodejs安装文件夹，打开属性，点击安全，点击编辑，选择users，点击允许完全控制，确定</li><li>重启电脑使配置生效</li><li>再次输入指令即可成功</li><li>如果还是出现以上错误可输入指令：hexo init blog</li><li>blog : 为文件夹名字</li></ul><hr><ul><li>在你建立的博客文件夹下打开git bash</li><li>生成静态文件，指令：hexo g</li><li>启动博客，指令：hexo s</li><li>出现 <a href="http://localhost:4000/">http://localhost:4000/</a></li><li>将链接用浏览器打开，即可看到你的博客</li></ul><hr><h2 id="将博客部署到github"><a href="#将博客部署到github" class="headerlink" title="将博客部署到github"></a>将博客部署到github</h2><ul><li>下载插件hexo-deployer-git</li><li>指令：npm install hexo-deployer-git –save</li><li>在你博客文件夹中找到_config.yml文件打开</li><li>拉到最下面，修改为</li><li>deploy:<br>type: git<br>repo: <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:xxx&#x2F;xxx.github.io.git<br>branch: main</li><li>repo即刚刚建立的仓库的SSH链接</li><li>注：记得在冒号后空一格</li></ul><hr><ul><li>在推送前输入邮箱和名字</li><li>指令：git config –global user.email “xxx”</li><li>xxx为你的GitHub邮箱</li><li>git config –global user.name “xxx”</li><li>xxx为你的GitHub名字</li><li>注：如果有打开加速节点的请先关闭</li><li>输入命令：hexo d</li><li>在仓库可见已成功推送，部署成功</li></ul>]]></content>
     
     
     
